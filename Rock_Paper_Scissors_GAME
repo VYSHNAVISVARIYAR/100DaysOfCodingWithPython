@@ -1,0 +1,24 @@
+import random
+
+choice=int(input("Enter your choice (0-2) :"))
+
+if(choice==0):
+    print("Rock")
+elif(choice==1):
+    print("Paper")
+elif(choice==2):
+    print("Scissors")
+
+rps = ["rock","paper","scissors"]
+randgen = random.randint(0,2)
+print("Computer chose:"+rps[randgen])
+
+if(choice<0 or choice>2):
+    print("Invalid choice of number. you lose!!")
+elif((choice==randgen)):
+    print("Tie")
+elif((choice==0 and randgen==1) or (choice==1 and randgen==2) or (choice==2 and randgen==0)):
+    print("You lose!!")
+else:
+    print("you won!!")
+
